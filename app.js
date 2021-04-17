@@ -7,7 +7,7 @@ const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const errorHandler = require("./helpers/error-handler");
 const authJwt = require("./helpers/jwt");
-require("dotenv/config");
+// require("dotenv/config");
 
 app.use(cors());
 app.options("*", cors());
@@ -16,7 +16,7 @@ app.options("*", cors());
 app.use(express.json());
 app.use(morgan("tiny"));
 // app.use(authJwt());
-app.use(errorHandler);
+// app.use(errorHandler);
 
 //Routes
 const categoriesRoutes = require("./routes/categories");
